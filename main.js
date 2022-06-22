@@ -52,7 +52,8 @@ function handleField(start) {
 function onSubmit(event) {
   event.preventDefault();
 
-  const proposalInput = event.target.proposal;
+  // 🦦 recupère la valeur du champ avec l'id "porposal" dans le HTML
+  const proposalInput = 0;
 
   const guessedNumber = proposalInput.value;
   proposalInput.value = '';
