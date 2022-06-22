@@ -5,7 +5,9 @@ const guessNumberState = {
   CORRECT: 'is CORRECT !',
 };
 
+// number of tries before the user find the number
 let triesTimes = 0;
+// generated number by the computer
 let numberToFind = undefined;
 
 // get needed elements
@@ -17,6 +19,8 @@ const formWrapper = document.querySelector('#form-wrapper');
 guessForm.addEventListener('submit', onSubmit);
 gameButton.addEventListener('click', handleGame);
 
+// this function will be called when the user click on the button when it's start or stop
+// it's why we check the numbertoFind to know if we need to start or stop the game
 function handleGame() {
   if (numberToFind !== undefined) {
     stopGame();
@@ -44,6 +48,7 @@ function handleField(start) {
   formWrapper.children['guess-form-info'].style.display = start ? 'none' : 'block';
 }
 
+// on submit button clicked
 function onSubmit(event) {
   event.preventDefault();
 
@@ -55,6 +60,7 @@ function onSubmit(event) {
   testProposal(Number(guessedNumber));
 }
 
+// test if the proposal is correct, low or high
 function testProposal(guessedNumber) {
   if (numberToFind === undefined) {
     return;
@@ -74,6 +80,7 @@ function testProposal(guessedNumber) {
   renderResult(guessedNumber, state, triesTimes);
 }
 
+// update the UI with the result of the proposal, the state and the number of tries
 function renderResult(guessedNumber, state, times) {
   const guessFormState = formWrapper.children['guess-form-state'];
   guessFormState.innerText = `${guessedNumber} ${state}`;
