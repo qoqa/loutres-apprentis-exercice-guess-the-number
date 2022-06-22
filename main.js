@@ -1,7 +1,7 @@
 // States for the user guessed number
-const guessNumberState = {
-  TO_HIGH: 'is too high',
-  TO_LOW: 'is too low',
+const GUESS_NUMBER_STATE = {
+  TOO_HIGH: 'is too high',
+  TOO_LOW: 'is too low',
   CORRECT: 'is CORRECT !',
 };
 
@@ -52,53 +52,58 @@ function handleField(start) {
 function onSubmit(event) {
   event.preventDefault();
 
-  // 🦦 recupère la valeur du champ avec l'id "porposal" dans le HTML
-  const proposalInput = 0;
+  // 🦦 recupère le champ avec l'id "porposal" dans le HTML
+  const proposalInput = undefined; // 💣 supprime undefined et remplace par la bonne valeur
 
-  const guessedNumber = proposalInput.value;
-  proposalInput.value = '';
+  // 🦦 recupère la valeur du champ proposalInput
+  const guessedNumber = undefined; // 💣 supprime undefined et remplace par la bonne valeur
+
+  // 🦦 change la valeur de proposalInput par "" <- text vide
+  // 🐽 proposalInput.
 
   testProposal(Number(guessedNumber));
 }
 
 // test if the proposal is correct, low or high
 function testProposal(guessedNumber) {
+  // if the game is not started, we don't do anything
   if (numberToFind === undefined) {
     return;
   }
 
+  // variable qui vas stocké le state de la ligne 1
   let state = undefined;
-  triesTimes += 1;
+  // 🦦 incrémente le nombre de tentative (triesTimes) de 1
+  // 🐽 triesTimes
 
+  // 🦦 vérifie si la valeur de guessedNumber est plus grande que la valeur de numberToFind
+  // puis si c'est le cas, on assigne le state à TO_HIGH
+  // 🦦 fait la même chose si c'est trop petit avec le state TO_LOW
   if (guessedNumber === numberToFind) {
-    state = guessNumberState.CORRECT;
-  } else if (guessedNumber > numberToFind) {
-    state = guessNumberState.TO_HIGH;
-  } else {
-    state = guessNumberState.TO_LOW;
+    state = GUESS_NUMBER_STATE.CORRECT;
   }
 
   renderResult(guessedNumber, state, triesTimes);
 }
 
 // update the UI with the result of the proposal, the state and the number of tries
-function renderResult(guessedNumber, state, times) {
+function renderResult(guessedNumber, state, tries) {
   const guessFormState = formWrapper.children['guess-form-state'];
   guessFormState.innerText = `${guessedNumber} ${state}`;
   guessFormState.style.display = 'block';
   guessFormState.classList.value = 'info';
 
-  if (state === guessNumberState.CORRECT) {
+  // 🦦 en fonction du state, ajoute la class correspondante à la div guessFormState
+  // state = CORRECT -> 'correct'
+  // state = TOO_HIGH -> 'too-high'
+  // state = TOO_LOW -> 'too-low'
+
+  if (state === GUESS_NUMBER_STATE.CORRECT) {
     handleGame();
     guessFormState.classList.add('correct');
   }
-  if (state === guessNumberState.TO_HIGH) {
-    guessFormState.classList.add('to-high');
-  }
-  if (state === guessNumberState.TO_LOW) {
-    guessFormState.classList.add('to-low');
-  }
 
   const tryTimes = formWrapper.children['try-times'];
-  tryTimes.innerText = `${times} tries`;
+  // 🦦 affiche le nombre de tentative (tries) dans l'element try-times
+  // 🐽 innerText
 }
