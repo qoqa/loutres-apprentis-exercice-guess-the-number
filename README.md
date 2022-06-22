@@ -1,10 +1,10 @@
 # Guess the number
 
-Hello, voici un jeu de deviner un nombre entre 1 et 100.
+Hello, voici un jeu pour deviner un nombre entre 1 et 100.
 
 ## Concepts
 
-Une fois cliqué sur le bouton "Start", un nombre aléatoire est choisi.
+Une fois quet tu cliqué sur le bouton "Start", un nombre aléatoire est choisi.
 
 L'utilisateur doit ensuite proposé un nombre entre 1 et 100.
 
@@ -33,5 +33,5 @@ Par exemple :
 
 - La loutre Melvyn 🦦 vas te dire quand il y a quelque chose de spécifique à faire.
 - Le nez de cochon Pascal 🐽 vas te dire des tips qui t'aideront à résoudre les problèmes de la loutre Melvyn 🦦.
-- Kevin le 💯 te proposera des challenge à faire sans l'aide de la loutre Jim 🦦 nni du cochon Pascal 🐽.
+- Kevin le 💯 te proposera des challenge à faire sans l'aide de la loutre Jim 🦦 ni du cochon Pascal 🐽.
 - Faton la 💣 qui te demande de supprimer un bout de code mis en attendant que tu fasse ton exercise pour que l'application fonctionne !

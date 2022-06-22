@@ -71,10 +71,6 @@ function testProposal(guessedNumber) {
 
   if (guessedNumber === numberToFind) {
     state = guessNumberState.CORRECT;
-  } else if (guessedNumber > numberToFind) {
-    state = guessNumberState.TO_HIGH;
-  } else {
-    state = guessNumberState.TO_LOW;
   }
 
   renderResult(guessedNumber, state, triesTimes);
