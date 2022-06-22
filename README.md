@@ -32,6 +32,6 @@ Par exemple :
 ## Exercise
 
 - La loutre Melvyn 🦦 vas te dire quand il y a quelque chose de spécifique à faire.
-- Le nez de cochon Pascal 🐽 vas te dire des tips à faire durant le jeu.
+- Le nez de cochon Pascal 🐽 vas te dire des tips qui t'aideront à résoudre les problèmes de la loutre Melvyn 🦦.
 - Kevin le 💯 te proposera des challenge à faire sans l'aide de la loutre Jim 🦦 nni du cochon Pascal 🐽.
 - Faton la 💣 qui te demande de supprimer un bout de code mis en attendant que tu fasse ton exercise pour que l'application fonctionne !
