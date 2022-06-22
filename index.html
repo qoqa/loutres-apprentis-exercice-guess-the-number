@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="panel">
+        <h1>Guess the number</h1>
+
+        <p>
+          When you will click on the start button, ton website will generate a number
+          between <strong>0 and 100</strong>.
+        </p>
+
+        <p>You have to guess the number.</p>
+
+        <p>You add the number on the input and click on the sumbmit button.</p>
+
+        <p>You will see a box with indication about your last answer.</p>
+
+        <p>The objective is to guess the number with the lower try possible.</p>
+
+        <button class="btn primary" id="game-button">Start</button>
+      </div>
+
+      <div id="form-wrapper" class="guess-form-wrapper">
+        <p>Proposal</p>
+        <form id="guess-form">
+          <input type="number" disabled class="input guess" id="proposal" />
+          <button disabled class="btn" type="submit">Submit</button>
+        </form>
+
+        <p id="guess-form-info" class="info">
+          To start the game, click on the start button.
+        </p>
+        <p id="guess-form-state" class="info" style="display: none"></p>
+        <p id="try-times" class="try-times">0 tries</p>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
