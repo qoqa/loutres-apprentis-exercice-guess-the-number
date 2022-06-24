@@ -30,22 +30,24 @@ function handleGame() {
 }
 
 function stopGame() {
-  handleField(false);
   numberToFind = undefined;
+
+  handleField(true);
 }
 
 function startGame() {
   numberToFind = Math.floor(Math.random() * 100) + 1;
   triesTimes = 0;
 
-  handleField(true);
+  handleField(false);
 }
 
 function handleField(start) {
+  console.log(start);
   gameButton.innerText = start ? 'Start' : 'Stop';
-  guessForm[0].disabled = !start;
-  guessForm[1].disabled = !start;
-  formWrapper.children['guess-form-info'].style.display = start ? 'none' : 'block';
+  guessForm[0].disabled = start;
+  guessForm[1].disabled = start;
+  formWrapper.children['guess-form-info'].style.display = start ? 'block' : 'none';
 }
 
 // on submit button clicked
