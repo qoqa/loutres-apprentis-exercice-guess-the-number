@@ -2,6 +2,12 @@
 
 Hello, voici un jeu pour deviner un nombre entre 1 et 100.
 
+## Instalation
+
+Dans le terminal, tapez `npm install` pour installer les packages !
+
+Pour lancer l'application, tapez `npm run start`
+
 ## Concepts
 
 Une fois quet tu cliqué sur le bouton "Start", un nombre aléatoire est choisi.
